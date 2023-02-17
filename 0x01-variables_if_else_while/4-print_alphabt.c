@@ -14,9 +14,7 @@ if (c <= 'z')
 {
 	putchar(c);
 	c++;
-}
 else if (c == 'q' && c == 'e')
-{
 	continue;
 }
 putchar('\n');
