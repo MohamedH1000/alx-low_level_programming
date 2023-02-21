@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet-x10 - to print all characters from a to z
+ * print_alphabet_x10 - to print all characters from a to z
  * Description: 'the program's description'
  * Return: Always 0 (Success)
  */
