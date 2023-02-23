@@ -7,7 +7,7 @@
   */
 void print_line(int n)
 {
-	int x;
+	int i;
 
 	if (n <= 0)
 	{
@@ -15,7 +15,7 @@ void print_line(int n)
 	}
 	else
 	{
-		for (x = 0; x < n; x++)
+		for (i = 0; i < n; i++)
 		{
 			_putchar(95);
 		}
