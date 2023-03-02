@@ -43,4 +43,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	}
 return (n < size_r - 1 ? r : 0);
+return (r);
 }
