@@ -1,75 +1,46 @@
 #include "main.h"
 /**
- * rev_string - reverse array
- * @n: integer params
- * Return: 0
- */
-
-void rev_string(char *n)
-{
-	int i = 0;
-	int j = 0;
-	char temp;
-
-	while (*(n + i) != '\0')
-	{
-		i++;
-	}
-	i--;
-
-	for (j = 0; j < i; j++, i--)
-	{
-		temp = *(n + j);
-		*(n + j) = *(n + i);
-		*(n + i) = temp;
-	}
-}/**
- * infinite_add - Add up two numbers stored in given char arrays
- * @n1: The first number
- * @n2: The second number
- * @r: Pointer to the buffer to store result
- * @size_r: The size of the buffer
- *
- * Return: 0 if buffer too small to store result, else return pointer to buffer
- */
+  * infinite_add - adds two numbers
+  * @n1: number1
+  * @n2: number2
+  * @r: result
+  * @size_r: size result
+  * Return: r addition
+**/
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int overflow = 0, i = 0, j = 0, digits = 0;
-	int val1 = 0, val2 = 0, temp_tot = 0;
+	int i = 0, j = 0, a, b, c, n, aux, dec = 0;
 
-	while (*(n1 + i) != '\0')
-		i++;
-	while (*(n2 + j) != '\0')
-		j++;
-	i--;
-	j--;
-	if (j >= size_r || i >= size_r)
-		return (0);
-	while (j >= 0 || i >= 0 || overflow == 1)
+	while (n1[i] != '\0')
 	{
-		if (i < 0)
-			val1 = 0;
-		else
-			val1 = *(n1 + i) - '0';
-		if (j < 0)
-			val2 = 0;
-		else
-			val2 = *(n2 + j) - '0';
-		temp_tot = val1 + val2 + overflow;
-		if (temp_tot >= 10)
-			overflow = 1;
-		else
-			overflow = 0;
-		if (digits >= (size_r - 1))
-			return (0);
-		*(r + digits) = (temp_tot % 10) + '0';
-		digits++;
-		j--;
-		i--;
+	i++;
 	}
-	if (digits == size_r)
-		return (0);
-	*(r + digits) = '\0';
-	rev_string(r);
-	return (r);
+	while (n2[j] != '\0')
+	{
+	j++;
+	}
+	for (n = 0; n < j || n < i; n++)
+	{
+	a = (i - n) > 0 ? (n1[i - n - 1] - '0') : 0;
+	b = (j - n) > 0 ? (n2[j - n - 1] - '0') : 0;
+	c = a + b + dec;
+	r[n] = (c % 10) + '0';
+	dec = c > 9 ? 1 : 0;
+	}
+	if (dec == 1)
+	{ r[n] = '1';
+	r[n + 1] = '\0'; }
+	else
+	{ r[n] = '\0';
+	n--; }
+	for (i = 0; i < n + 1; i++)
+	{
+	for (j = 0; j < (n - i); j++)
+	{
+	aux = r[j + 1];
+	r[j + 1] = r[j];
+	r[j] = aux;
+	}
+	}
+return (n < size_r - 1 ? r : 0);
 }
