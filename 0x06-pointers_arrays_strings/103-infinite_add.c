@@ -4,8 +4,8 @@
   * @n1: number1
   * @n2: number2
   * @r: result
-  * @size_r: size result
-  * Return: r addition
+  * @size_r: size of result
+  * Return: the sum of the 2 numbers
 **/
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -28,11 +28,15 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	dec = c > 9 ? 1 : 0;
 	}
 	if (dec == 1)
-	{ r[n] = '1';
-	r[n + 1] = '\0'; }
+	{ 
+	r[n] = '1';
+	r[n + 1] = '\0'; 
+	}
 	else
-	{ r[n] = '\0';
-	n--; }
+	{ 
+	r[n] = '\0';
+	n--; 
+	}
 	for (i = 0; i < n + 1; i++)
 	{
 	for (j = 0; j < (n - i); j++)
