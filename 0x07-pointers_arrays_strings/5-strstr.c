@@ -7,32 +7,28 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *occ, *temp;
+	char *occurance, *tempNeedle;
 
-	if (!*needle)
-	{
+	if (!*needle) /* empty needle */
 		return (haystack);
-	}
 	while (*haystack)
 	{
-		if (*haystack == *needle)
+		if (*haystack == *needle) /* first ch match */
 		{
-			occ = haystack;
-			temp = needle;
-		}
-		while (*temp)
-		{
-			if (*haystack++ != *temp++)
+			occurance = haystack;
+			tempNeedle = needle;
+			while (*tempNeedle) /* check if match */
 			{
-				haystack = occ;
-				break;
+				if (*haystack++ != *tempNeedle++)
+				{ /* not a match, reset pointer to first occurance */
+					haystack = occurance;
+					break;
+				}
 			}
-		}
-		if (occ != haystack)
-		{
-			return (occ);
+			if (occurance != haystack) /* didn't reset, found match */
+				return (occurance);
 		}
 		haystack++;
 	}
-	return (0);
+	return (0); /* didn't find match */
 }
