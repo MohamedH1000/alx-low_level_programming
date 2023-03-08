@@ -1,24 +1,25 @@
 #include <stdio.h>
 /**
- * checker - checks the input number from n to the base
+ * check - checks the input number from n to the base
  * @n: number is squared and compared against base
- * @base: base number to check
+ * @b: base number to check
  * Return: natural square root of number base
  */
-int checker(int n, int base)
+int check(int n, int b)
 {
-	if (n * n == base)
+	if (n * n == b)
 		return (n);
-	if (n * n > base)
+	if (n * n > b)
 		return (-1);
-	return (checker(n + 1, base));
+	return (check(n + 1, b));
 }
 /**
- * _sqrt_recursion - return the natural square root of a number n.
+ * _sqrt_recursion - a function that return
+ * the natural square root of a number n.
  * @n: number to check for square roots.
  * Return: the natural square root of number n
  */
 int _sqrt_recursion(int n)
 {
-	return (checker(1, n));
+	return (check(1, n));
 }
