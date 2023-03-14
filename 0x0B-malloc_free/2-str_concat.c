@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _str_concat - a function that concatenates two string
+ * str_concat - a function that concatenates two string
  * @s1 : string 1 to be concatenated
  * @s2 : string 2 that concatenate to string 1
  * Return: NULL in faliure
