@@ -40,6 +40,8 @@ char *argstostr(int ac, char **av)
 			p[c] = av[a][b];
 			c++;
 		}
+		p[c] = '\n';
+		c++;
 	}
 		p[c] = '\0';
 		return (p);
