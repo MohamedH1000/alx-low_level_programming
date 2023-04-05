@@ -12,7 +12,7 @@ size_t looped_listint_count(listint_t *head)
 {
 	listint_t *tortoise, *hare;
 	size_t nodes = 1;
-	
+
 	if (head == NULL || head->next == NULL)
 		return (0);
 	tortoise = head->next;
