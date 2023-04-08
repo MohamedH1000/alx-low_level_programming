@@ -3,7 +3,7 @@
 /**
  * _strlen - to calculate the string length
  * @c : the char to be calculated
- * return : the length in an integer form
+ * Return: the length in an integer form
  */
 int _strlen(const char *c)
 {
@@ -15,6 +15,11 @@ int _strlen(const char *c)
 	}
 	return (a);
 }
+/**
+ * binary_to_uint - a function to convert from binary to char
+ * @b : the char to be tested
+ * Return: the binary that have been converted to char
+ */
 unsigned int binary_to_uint(const char *b)
 {
 	int j;
