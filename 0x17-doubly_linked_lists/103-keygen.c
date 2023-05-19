@@ -3,9 +3,9 @@
 #include <stdlib.h>
 /**
   * f1_f2 - a function that copied from server
-  * @p: you can say that its argv[1]
-  * @pl: argv[1] length
-  * @flag: determine if its in case of f1 or f2
+  * @b: you can say that its argv[1]
+  * @b1: argv[1] length
+  * @f: determine if its in case of f1 or f2
   * Return: key array elements
   */
 int f1_f2(char *b, int b1, char f)
@@ -24,8 +24,8 @@ int f1_f2(char *b, int b1, char f)
 }
 /**
   * f3 - a function that copied from server
-  * @p: you can say that is argv[1]
-  * @pl: argv[1] length
+  * @b: you can say that is argv[1]
+  * @b1: argv[1] length
   * Return: key array element
   */
 int f3(char *b, int b1)
@@ -41,8 +41,8 @@ int f3(char *b, int b1)
 }
 /**
   * f4 - a function copied from server
-  * @p: you can say argv[1]
-  * @pl: argv[1] length
+  * @b: you can say argv[1]
+  * @b1: argv[1] length
   * Return: key array element
   */
 int f4(char *b, int b1)
@@ -55,7 +55,7 @@ int f4(char *b, int b1)
 }
 /**
   * f5 - a function that copied from server
-  * @p: you can say that its argv[1]
+  * @b: you can say that its argv[1]
   * Return: key array element
   */
 int f5(char b)
@@ -75,7 +75,7 @@ int f5(char b)
 int main(int ac, char *av[])
 {
 	char *b;
-	char ch[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	char ch[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYiLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	char k[7];
 	int b1, result;
 
