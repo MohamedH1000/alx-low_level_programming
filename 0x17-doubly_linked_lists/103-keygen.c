@@ -75,7 +75,7 @@ int f5(char b)
 int main(int ac, char *av[])
 {
 	char *b;
-	char ch[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+char ch[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	char k[7];
 	int b1, result;
 
