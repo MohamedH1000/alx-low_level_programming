@@ -1,4 +1,4 @@
-#include "search_algos.h"
+#include "search_algorithm.h"
 
 /**
  * linear_search - a value in an array of integers
